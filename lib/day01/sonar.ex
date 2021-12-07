@@ -1,4 +1,4 @@
-defmodule AdventOfCode.Day01.Day01 do
+defmodule AoC.Day01.Sonar do
   def get_result() do
     File.stream!("data/input.txt")
     |> Stream.map(&String.trim_trailing/1)
@@ -8,11 +8,11 @@ defmodule AdventOfCode.Day01.Day01 do
     |> checking
   end
 
-  defp checking(list) do
-    list
+  defp checking(data) do
+    data
     |> Enum.reduce(0, fn {elm, index}, acc ->
       if index > 0 do
-        {prev, _} = Enum.at(list, index - 1)
+        {prev, _} = Enum.at(data, index - 1)
         if (elm > prev) do
           acc + 1
         else

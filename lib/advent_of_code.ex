@@ -1,6 +1,6 @@
-defmodule AdventOfCode do
+defmodule AoC do
   @moduledoc """
-  Documentation for `AdventOfCode`.
+  Documentation for `AoC`.
   """
 
   @doc """
@@ -8,7 +8,7 @@ defmodule AdventOfCode do
 
   ## Examples
 
-      iex> AdventOfCode.hello()
+      iex> AoC.hello()
       :world
 
   """

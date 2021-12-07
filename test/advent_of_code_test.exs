@@ -1,8 +1,8 @@
-defmodule AdventOfCodeTest do
+defmodule AoCTest do
   use ExUnit.Case
-  doctest AdventOfCode
+  doctest AoC
 
   test "greets the world" do
-    assert AdventOfCode.hello() == :world
+    assert AoC.hello() == :world
   end
 end
