@@ -17,7 +17,7 @@ defmodule AoC.Day02.DiveV2 do
       data
       |> Enum.reduce([0, 0, 0], fn row, acc -> go_to(row, acc) end)
       |> IO.inspect
-      
+
     horizontal * depth
   end
 
