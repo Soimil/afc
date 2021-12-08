@@ -54,9 +54,9 @@ defmodule AoC.Day03.BinaryDiagnostic do
     epsilon = data
       |> Enum.map(fn e ->
       if e > 0 do
-        "0"
+        0
       else
-        "1"
+        1
       end
     end)
     |> Enum.join
