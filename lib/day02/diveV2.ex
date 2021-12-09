@@ -16,12 +16,14 @@ defmodule AoC.Day02.DiveV2 do
     [horizontal, depth, _] =
       data
       |> Enum.reduce([0, 0, 0], fn row, acc -> go_to(row, acc) end)
-      |> IO.inspect
+      |> IO.inspect()
 
     horizontal * depth
   end
 
   defp go_to(["up", points], [horizontal, depth, aim]), do: [horizontal, depth, aim - points]
   defp go_to(["down", points], [horizontal, depth, aim]), do: [horizontal, depth, aim + points]
-  defp go_to(["forward", points], [horizontal, depth, aim]), do: [horizontal + points, depth + (points * aim), aim]
+
+  defp go_to(["forward", points], [horizontal, depth, aim]),
+    do: [horizontal + points, depth + points * aim, aim]
 end
